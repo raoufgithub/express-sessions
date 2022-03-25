@@ -109,7 +109,7 @@ app.post('/register', (req,res) => {
                 if (err) throw err;
                 req.session.username = newUser.username;
             
-                
+                console.log("test for github")
                 return res.redirect('/');
             });
 

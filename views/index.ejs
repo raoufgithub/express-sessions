@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <form method="post" action="/logout">
+                <input class="button-logout" type="submit" value="Logout">
+            </form>
+            
+            <a href="/add"><img class="img-add" src="/images/add.png" alt="" ></a>
+        </div>
+        <div>
+            <%
+            if (book.length != 0){
+            %>
+                <table class="table">
+                    <tr>
+                        <th>NOM DU LIVRE</th>
+                        <th>NOM DE L'AUTEUR</th>
+                        <th>NOMBRE DE PAGE</th>
+    
+                    </tr>
+                    <%
+                    for(var i=0; i<book.length; i++){
+                            
+                        
+                    %>
+                    <tr>
+                        
+                        <td>
+                            <%= book[i]["name-book"] %>
+                        </td>
+                        <td>
+                            <%= book[i]["name-author"] %>
+                        </td>
+                        <td>
+                            <%= book[i]["nbre-pge"] %>
+                        </td>
+                          
+                    </tr>
+                    <%
+                    }
+                    %>
+                   
+                    
+                    
+                </table>
+            <%
+            }
+
+            %>
+            
+            
+        </div>
+
+    </div>
+</body>
+</html>
